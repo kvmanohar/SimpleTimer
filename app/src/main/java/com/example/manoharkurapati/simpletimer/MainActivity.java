@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
     private Button btnStart;
     private Button btnReset;
     private ProgressBar mProgressBar;
-    private Uri notification;
+    private Uri notificationUri;
     private Ringtone ringtone;
 
     @Override
@@ -33,8 +33,9 @@ public class MainActivity extends Activity {
         btnReset = (Button) findViewById(R.id.btnReset);
         btnStart = (Button) findViewById(R.id.btnStart);
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
-        notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
-        ringtone = RingtoneManager.getRingtone(this,notification);
+
+        notificationUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+        ringtone = RingtoneManager.getRingtone(this,notificationUri);
 
         countDownTimer = new CountDownTimer(5000, 1000) {
             @Override
@@ -51,8 +52,6 @@ public class MainActivity extends Activity {
             }
 
         };
-
-
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
