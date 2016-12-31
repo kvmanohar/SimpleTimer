@@ -7,21 +7,22 @@
     android:padding="16dp"
     tools:context="com.example.manoharkurapati.simpletimer.MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+
+    <TextSwitcher
+        android:id="@+id/textSwitcher"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="40dp"
-        android:text="5"
-        android:textSize="60sp" />
+        android:layout_centerHorizontal="true"
+       android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
+        android:layout_marginTop="60dp"
+        />
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:max="5"
-        android:layout_below="@+id/textView"
+        android:layout_below="@id/textSwitcher"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
