@@ -78,6 +78,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 countDownTimer.start();
+                btnStart.setEnabled(false);
             }
         });
 
@@ -88,6 +89,7 @@ public class MainActivity extends Activity {
                 textSwitcher.setText("5");
                 mProgressBar.setProgress(0);
                 ringtone.stop();
+                btnStart.setEnabled(true);
             }
         });
 
